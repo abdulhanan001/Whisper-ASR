@@ -2,6 +2,13 @@
 
 Whisper ASR Webservice now available on Docker Hub. You can find the latest version of this repository on docker hub for CPU and GPU.
 
+For GPU:
+
+```sh
+docker pull onerahmet/openai-whisper-asr-webservice:latest-gpu
+docker run -d --gpus all -p 9000:9000 -e ASR_MODEL=base -e ASR_ENGINE=openai_whisper onerahmet/openai-whisper-asr-webservice:latest-gpu
+```
+
 For CPU:
 
 ```sh
@@ -9,12 +16,6 @@ docker pull onerahmet/openai-whisper-asr-webservice:latest
 docker run -d -p 9000:9000 -e ASR_MODEL=base -e ASR_ENGINE=openai_whisper onerahmet/openai-whisper-asr-webservice:latest
 ```
 
-For GPU:
-
-```sh
-docker pull onerahmet/openai-whisper-asr-webservice:latest-gpu
-docker run -d --gpus all -p 9000:9000 -e ASR_MODEL=base -e ASR_ENGINE=openai_whisper onerahmet/openai-whisper-asr-webservice:latest-gpu
-```
 
 For MacOS (CPU only):
 
